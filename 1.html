@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Bootstrap Table with Add and Delete Row Feature</title>
+<link href="1.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="1.js"></script>
+</head>
+<body>
+
+<div class="container" style="margin-top: 120px;">
+    <h4 style="padding-bottom: 10px;"><u>Requirements</u></h4>
+    <div class="row">
+        <table id="requirements table-bordered" style="">
+            <tr>
+                <td>Borehole considered for the analysis</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Depth of BH, m</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Peak ground acceleration for EQ-1, g</td>
+                <td>amax</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Peak ground acceleration for EQ-2, g</td>
+                <td>amax</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Acceleration of gravity, m/s2</td>
+                <td>g</td>
+                <td>9.81</td>
+            </tr>
+            <tr>
+                <td>Unit weight of water, kN/m3</td>
+                <td>γw</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Earthquake Magnitude</td>
+                <td>MW</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Magnitude scaling factor</td>
+                <td>MSF</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div style="padding-top: 40px; padding-left: 430px;">
+    <table>
+        <tr>
+            <td>Thickness of the first soil layer as per borelog, m = </td>
+            <td><input type="text"></td>
+        </tr>
+    </table>
+</div>
+
+    
+<div class="container-lg">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-8"><h2><u>Liquefaction <b>Analysis</b></u></h2></div>
+                    <div class="col-sm-4">
+                        <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 35px;">RL From</th>
+                        <th style="width: 35px;">RL To</th>
+                        <th style="width: 70px;">Depth below EGL<br>during construction</th>
+                        <th style="width: 65px;">Soil/Rock Description</th>
+                        <th style="width: 45px;">Symbol</th>
+                        <th style="width: 45px;">Group Type</th>
+                        <th style="width: 65px;">Consistency</th>
+                        <th style="width: 55px;">Observed SPT N Value</th>
+                        <th style="width: 55px;">Saturated density</th>
+                        <th style="width: 67px;">Unsaturated density</th>
+                        <th style="width: 50px;">Fines Content</th>
+                        <th style="width: 40px;">Liquid Limit</th>
+                        <th style="width: 50px;">Plasticity Index</th>
+                        <th style="width: 60px;">Stress Reduction Coefficient (rd)</th>
+                        <th style="width: 65px;">Total Overburden Pressure (σ0)</th>
+                        <th style="width: 70px;">Effective Overburden (σ')</th>
+                        <th style="width: 50px; background-color: rgb(178, 225, 130);">Cyclic Stress Ratio (CSR)</th>
+                        <th style="width: 30px;">CN</th>
+                        <th style="width: 30px;">CE or CHT</th>
+                        <th style="width: 30px;">CH or CHW</th>
+                        <th style="width: 30px;">CB or CBD</th>
+                        <th style="width: 30px;">CR or CRL</th>
+                        <th style="width: 30px;">CS or CSS</th>
+                        <th style="width: 55px;">SPT Corrected (N1)60</th>
+                        <th style="width: 20px;">α</th>
+                        <th style="width: 20px;">β</th>
+                        <th style="width: 50px;">(N1)60CS</th>
+                        <th style="width: 70px;">CRRM = 7.5</th>
+                        <th style="width: 50px; background-color: rgb(178, 225, 130);">CRR (scaling factors)</th>
+                        <th style="width: 50px;">FOS for ELS 1</th>
+                        <th style="width: 70px; background-color: rgb(237, 139, 69);">Conclusion</th>
+                        <th style="width: 50px;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td style="background-color: rgb(178, 225, 130);"><input type="text" class="form-control" name="" id="" style="background-color: rgb(178, 225, 130); border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td style="background-color: rgb(178, 225, 130);"><input type="text" class="form-control" name="" id="" style="background-color: rgb(178, 225, 130);  border: none;"></td>
+                        <td><input type="text" class="form-control" name="" id="" style="border: none;"></td>
+                        <td style="background-color: rgb(237, 139, 69);"><input type="text" class="form-control" name="" id="" style="background-color: rgb(237, 139, 69); border: none;"></td>
+                        <td>
+                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>      
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>     
+</body>
+</html>
